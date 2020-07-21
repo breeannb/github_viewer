@@ -1,7 +1,7 @@
 import React from 'react';
-import userInput from '../userInput/userInput';
+import UserInput from '../userInput/UserInput';
 
 export default function App() {
-  return <userInput />;
+  return <UserInput />;
 }
   
