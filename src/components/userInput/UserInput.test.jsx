@@ -1,11 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import UserInput from './UserInput';
 
-describe('UserInput component', () => {
+describe('App component', () => {
   it('renders App', () => {
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<UserInput />);
     expect(wrapper).toMatchSnapshot();
   });
 });
-  
