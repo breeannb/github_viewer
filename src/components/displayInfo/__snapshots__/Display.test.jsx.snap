@@ -2,9 +2,17 @@
 
 exports[`App component renders App 1`] = `
 <ul>
-  <li />
-  <li />
-  <li />
-  <li />
+  <li>
+    Username: 
+  </li>
+  <li>
+    Followers: 
+  </li>
+  <li>
+    Following: 
+  </li>
+  <li>
+    Profile: 
+  </li>
 </ul>
 `;
