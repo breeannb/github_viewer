@@ -11,7 +11,6 @@ const Display = ({ name, followers, following, html_url }) => (
         <a href={html_url}>Profile Link</a>
       </li>
     </ul>
-  
   </>
 );
 
