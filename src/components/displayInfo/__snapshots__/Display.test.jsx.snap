@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<Fragment>
+  <p>
+    Username: 
+  </p>
+  <ul>
+    <li>
+      Followers: 
+      4
+    </li>
+    <li>
+      Following: 
+      200
+    </li>
+    <li>
+      <a
+        href="https://github.com/breeannb"
+      >
+        Profile Link
+      </a>
+    </li>
+  </ul>
+  <p>
+     Repositories: 
+  </p>
+  <ul>
+    <li>
+      <li>
+        <a
+          href="https://github.com/breeannb"
+        >
+          Breeann
+        </a>
+      </li>
+    </li>
+  </ul>
+</Fragment>
+`;
