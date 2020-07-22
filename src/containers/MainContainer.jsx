@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getUserInfo } from '../services/getUserInfo';
+import { getUserInfo, getRepos } from '../services/getUserInfo';
 import UserInput from '../components/UserInput/UserInput';
 import Display from '../components/displayInfo/Display';
 
@@ -9,7 +9,8 @@ export default class MainContainer extends Component {
     name: '', 
     followers: '', 
     following: '', 
-    html_url: ''
+    html_url: '', 
+    repos: []
   };
 
   handleChange = ({ target }) => {
@@ -21,17 +22,18 @@ export default class MainContainer extends Component {
 
     const { gitHubProfile } = this.state;
     Promise.all([
-      getUserInfo(gitHubProfile)
+      getUserInfo(gitHubProfile),
+      getRepos(gitHubProfile)
     ])
-      .then(([{ name, followers, following, html_url }]) => this.setState({ name, followers, following, html_url }));
+      .then(([{ name, followers, following, html_url }, repos]) => this.setState({ name, followers, following, html_url, repos }));
   }
 
   render() {
-    const { gitHubProfile, name, followers, following, html_url } = this.state;
+    const { gitHubProfile, name, followers, following, html_url, repos } = this.state;
     return (
       <div>
         <UserInput gitHubProfile={gitHubProfile} onChange={this.handleChange} onSubmit={this.handleSubmit} />
-        <Display name={name} followers={followers} following={following} html_url={html_url} />
+        <Display name={name} followers={followers} following={following} html_url={html_url} repos={repos} />
       </div>
     );
   }
