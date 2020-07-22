@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<ul>
-  <li>
-    Username: 
-  </li>
-  <li>
-    Followers: 
-  </li>
-  <li>
-    Following: 
-  </li>
-  <li>
-    Profile: 
-  </li>
-</ul>
+<Fragment>
+  <ul>
+    <li>
+      Username: 
+    </li>
+    <li>
+      Followers: 
+    </li>
+    <li>
+      Following: 
+    </li>
+    <li>
+      <a>
+        Profile Link
+      </a>
+    </li>
+  </ul>
+</Fragment>
 `;
